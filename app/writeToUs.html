@@ -15,14 +15,14 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
 	<!-- End_Styles -->
 	<!-- Scripts -->
 	<script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
+	<script type="text/javascript" src="libs/jquery-ui/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<!-- End_Scripts -->
 </head>
@@ -36,17 +36,19 @@
 			</div>
 		</div>
 		<div class="header__center">
-			<script type="text/javascript">
-				$(document).ready(function() {
-					$('.p-slider').slick();
-				});
-			</script>
 			<ul class="p-slider">
 				<li class="p-slider__item">
-					<a href="tel:+74959958290" class="p-slider__link">Москва: +7 (495) 995-82-90</a>
-				</li>
-				<li class="p-slider__item">
-					<a href="tel:+74959958290" class="p-slider__link">Москва: +7 (495) 995-82-90</a>
+					<script>
+						$(document).ready(function() {
+							$('.p-slider__select').selectmenu();
+						});
+					</script>
+					<select name="" id="" class="p-slider__select">
+						<option value="">Москва</option>
+						<option value="">СПб</option>
+						<option value="">Сочи</option>
+					</select>
+					<a href="tel:+74959958290" class="p-slider__link">+7 (495) 995-82-90</a>
 				</li>
 			</ul>
 		</div>
@@ -81,53 +83,36 @@
 		</div>
 	</header>
 	<div class="page">
-		<div class="page__amenities">
-			<div class="amenities">
-				<b class="amenities__title">
-					Услуги
-				</b>
-				<ul class="amenities__element">
-					<li class="amenities__item">
-						ИТ обеспечение
-					</li>
-					<li class="amenities__item">
-						Информационное насыщение
-					</li>
-					<li class="amenities__item">
-						Аудио и конф. системы
-					</li>
-					<li class="amenities__item">
-						Инженерия
-					</li>
-					<li class="amenities__item">
-						Видеопродакшн
-					</li>
-					<li class="amenities__item">
-						Аренда оборудование
-					</li>
-				</ul>
-			</div>
+		<div class="page__pagination">
+			<ul class="pagination">
+				<li class="pagination__item">
+					<a href="#" class="pagination__link">
+						главная
+					</a>
+				</li>
+				<li class="pagination__item pagination__item-active">
+					<a href="#" class="pagination__link">
+						написать нам
+					</a>
+				</li>
+			</ul>
 		</div>
-		<div class="page__amenities page__f-projects">
-			<div class="amenities f-projects">
-				<b class="amenities__title f-projects__title">
-					Готовые проекты
+		<div class="page__email-us">
+			<div class="email-us">
+				<b class="email-us__title">
+					написать нам
 				</b>
-				<div class="f-projects__item">
-					<div class="f-projects__img-wp">
-						<img src="img/f-projects-img.jpg" alt="" class="f-projects__img">
-						<div class="f-projects__img-text">
-							<p>
-								Зал пленарного заседания ВЭФ-2015, Владивосток
-							</p>
-						</div>
+				<form action="">
+					<input type="text" class="email-us__input" placeholder="Ваше имя" required>
+					<input type="text" class="email-us__input" placeholder="Ваш E-mail" required>
+					<textarea name="" id="" cols="30" rows="10" class="email-us__textarea" placeholder="Сообщение" required></textarea>
+					<div class="email-us__captcha">
+						<!--Здесь должна быть капча-->
 					</div>
-					<div class="f-projects__description">
-						<p>
-							ЗАО «АСТ Телеком» предлагает своим клиентам полное техническое обеспечение мероприятий любого масштаба — от небольших пресс-конференций до международных съездов с участием видных иностранных делегаций.
-						</p>
-					</div>
-				</div>
+					<button type="submit" class="email-us__button">
+						Отправить
+					</button>
+				</form>
 			</div>
 		</div>
 	</div>

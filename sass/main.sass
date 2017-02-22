@@ -4,7 +4,8 @@
 
 body
 	font-size: 16px
-	min-width: 320px
+	width: 320px
+	margin: 0 auto
 	position: relative
 	line-height: 1.25
 	font-family: "OpenSansRegular", sans-serif
@@ -41,6 +42,35 @@ body
 	position: relative
 	&__item
 		text-align: center
+		.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
+			border: none !important
+			background-color: transparent !important
+			width: 75px
+			padding: 0
+			position: relative
+			padding-right: 17px
+			text-align: right
+			&::after
+				content: ''
+				width: 11px
+				height: 7px
+				display: block
+				position: absolute
+				right: 2px
+				top: 50%
+				margin-top: -3.5px
+				background-image: url(../img/icon/arrow.png)
+				background-repeat: no-repeat
+				background-position: center center
+		.ui-selectmenu-icon
+			display: none
+		.ui-selectmenu-text
+			margin-right: 0
+			overflow: unset !important
+			color: #282828
+			display: inline-block
+			font-size: 17px
+			line-height: 27px
 	&__link
 		display: inline-block
 		color: #282828
@@ -134,7 +164,20 @@ body
 			color: #adadad
 
 .page
-	&__amenities
+	position: relative
+	&__f-popup
+		position: fixed
+		display: block
+		width: auto
+		background-color: #fff
+		z-index: 999
+		left: 10px
+		right: 10px
+		top: 50%
+		-webkit-transform: translateY(-50%)
+		transform: translateY(-50%)
+		padding: 20px 20px 15px
+		display: none
 
 .amenities
 	text-align: center
@@ -192,3 +235,373 @@ body
 			width: 21px
 			height: 15px
 			display: block
+
+.f-projects
+	&__item
+		padding: 0 10px
+		position: relative
+	&__img
+		display: block
+		width: 100%
+		height: auto
+		top: 0
+		left: 0
+		right: 0
+		position: absolute
+		&-wp
+			height: 273px
+			overflow: hidden
+			position: relative
+			margin-left: -10px
+			margin-right: -10px
+		&-text
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			text-align: left
+			background-color: rgba(#4698d0,.85)
+			padding: 12px 10px
+			display: block
+			width: 100%
+			p
+				color: #fff
+				font-size: 16px
+	&__description
+		padding: 12px 0
+		text-align: left
+		p
+			color: #282828
+			font-size: 14px
+			line-height: 22px
+			font-family: "OpenSansLight", sans-serif
+			text-align: justify
+			text-align-last: justify
+
+.footer
+	padding: 25px 10px
+	background-color: #282828
+	&__top
+		text-align: center
+		span, a
+			color: #8c8c8c
+			font-size: 14px
+			line-height: 12px
+
+.f-contact
+	a
+		text-decoration: underline
+		&:hover, &:active, &:focus
+			text-decoration: none
+
+.social
+	font-size: 0
+	text-align: center
+	padding-top: 18px
+	&__item
+		margin-left: 9px
+		display: inline-block
+		&:first-child
+			margin-left: 0
+	&__link
+		display: block
+		width: 32px
+		height: 32px
+		background-color: #ffc20a
+		border-radius: 3px
+		position: relative
+	&-f
+		width: 11px
+		height: 20px
+		position: absolute
+		top: 50%
+		margin-top: -10px
+		left: 50%
+		margin-left: -5.5px
+		background-image: url(../img/icon/soc-icon.png)
+		background-repeat: no-repeat
+		background-position: left top
+		display: block
+	&-t
+		width: 18px
+		height: 17px
+		position: absolute
+		top: 50%
+		margin-top: -8.5px
+		left: 50%
+		margin-left: -9px
+		background-image: url(../img/icon/soc-icon.png)
+		background-repeat: no-repeat
+		background-position: -12px top
+		display: block
+	&-v
+		width: 22px
+		height: 13px
+		position: absolute
+		top: 50%
+		margin-top: -6.5px
+		left: 50%
+		margin-left: -11px
+		background-image: url(../img/icon/soc-icon.png)
+		background-repeat: no-repeat
+		background-position: right top
+		display: block
+
+.f-version
+	&-wp
+		padding: 16px 10px
+	&__link
+		text-decoration: underline
+		color: #282828
+		font-size: 14px
+		&:hover, &:active, &:focus
+			text-decoration: none
+			color: #282828
+
+.pagination
+	font-size: 0
+	padding: 0 10px
+	padding-top: 15px
+	&__item
+		display: inline-block
+		padding-right: 14px
+		position: relative
+		margin-bottom: 5px
+		&::before
+			content: ''
+			@include triangle(10px 14px, #fff #cfcfcf, down-left);
+			position: absolute
+			left: -10px
+			top: 0
+			display: block
+			z-index: -2
+		&::after
+			content: ''
+			@include triangle(10px 14px, #fff #cfcfcf, up-left);
+			position: absolute
+			left: -10px
+			bottom: 0
+			display: block
+			z-index: -2
+		&:first-child
+			&::before
+				display: none
+			&::after
+				display: none
+		&-active
+			&::before
+				@include triangle(10px 14px, #fff #ffc10c, down-left);
+			&::after
+				@include triangle(10px 14px, #fff #ffc10c, up-left);
+			.pagination__link
+				background-color: #ffc10c
+				&::after
+					@include triangle(29px 10px, #ffc10c, right)
+	&__link
+		height: 29px
+		display: block
+		padding-left: 11px
+		padding-right: 6px
+		background-color: #cfcfcf
+		text-transform: uppercase
+		line-height: 29px
+		color: #282828
+		font-size: 12px
+		font-family: "OpenSansLight", sans-serif
+		position: relative
+		&::after
+			content: ''
+			@include triangle(29px 10px, #cfcfcf, right)
+			position: absolute
+			right: -10px
+			top: 0
+			display: block
+		&:hover, &:active, &:focus
+			text-decoration: none
+			color: #282828
+
+.email-us
+	padding: 0 10px 12px
+	&__title
+		text-transform: uppercase
+		color: #282828
+		font-size: 18px
+		line-height: 27px
+		font-family: "OpenSansLight", sans-serif
+		display: block
+		padding-top: 10px
+		padding-bottom: 8px
+	&__input
+		margin-bottom: 12px
+		padding: 0 13px
+		height: 40px
+		display: block
+		border: 1px solid #cfcfcf
+		width: 100%
+	&__textarea
+		padding: 8px 13px
+		display: block
+		border: 1px solid #cfcfcf
+		height: 99px
+		resize: none
+		width: 100%
+	&__button
+		height: 47px
+		display: block
+		width: 100%
+		background-color: #ffc607
+		line-height: 45px
+		text-transform: uppercase
+		color: #fff
+		border: 1px solid #ffc607
+		margin-top: 12px
+
+.a-company
+	padding: 0 10px
+	&__description
+		padding-top: 0
+	&__video
+		text-align: center
+		padding-top: 12px
+		iframe
+			display: inline-block
+			width: auto
+			height: 170px
+
+.project
+	&__button
+		height: 47px
+		display: block
+		width: 100%
+		background-color: #ffc607
+		line-height: 45px
+		text-transform: uppercase
+		color: #fff
+		border: 1px solid #ffc607
+		text-align: center
+		&:hover, &:focus, &:active
+			text-decoration: none
+			color: #fff
+		&-wp
+			padding-bottom: 12px
+
+.projects
+	&__element
+		&-hidden
+			display: none
+	&__item
+		padding-bottom: 12px
+		&-title
+			text-transform: uppercase
+			color: #282828
+			font-size: 14px
+			font-family: "OpenSansLight", sans-serif
+			display: inline
+			&:hover
+				text-decoration: underline
+				color: #282828
+			&:active, &:focus
+				text-decoration: none
+				color: #282828
+	&__img
+		width: 100%
+		height: auto
+		display: block
+		position: absolute
+		top: 50%
+		-webkit-transform: translateY(-50%)
+		transform: translateY(-50%)
+		left: 0
+		right: 0
+		&-wp
+			height: 198px
+			position: relative
+			overflow: hidden
+			margin-bottom: 6px
+
+.r-full
+	background-color: #4698d0
+	padding: 12px 10px
+	text-align: center
+	&__text
+		color: #fff
+		font-size: 15px
+		display: inline-block
+		padding-left: 30px
+		position: relative
+		&:hover
+			color: #fff
+			text-decoration: none
+		&:active, &:focus
+			color: #fff
+			text-decoration: none
+		&::before
+			content: ''
+			width: 20px
+			height: 17px
+			background-image: url(../img/icon/mon.png)
+			background-repeat: no-repeat
+			display: block
+			background-position: center center
+			position: absolute
+			left: 0
+			top: 50%
+			-webkit-transform: translateY(-50%)
+			transform: translateY(-50%)
+
+.services
+	&__title
+		&-wp
+			padding: 0 10px
+	&__element
+		padding: 6px 10px 0
+
+.f-popup
+	position: relative
+	&__close
+		width: 11px
+		height: 11px
+		display: block
+		border: none
+		background-color: transparent
+		background-image: url(../img/icon/close.png)
+		background-repeat: no-repeat
+		background-position: center center
+		position: absolute
+		top: -15px
+		right: -15px
+	&__description
+		text-align: center
+		p
+			color: #282828
+			font-size: 15px
+			line-height: 18px
+			display: inline
+		a
+			display: inline
+			color: #4698d0
+			text-decoration: underline
+			font-size: 15px
+			line-height: 18px
+			&:hover
+				text-decoration: none
+			&:active, &:focus
+				color: #4698d0
+				text-decoration: underline
+	&__img
+		display: inline-block
+		width: 119px
+		height: 38px
+		&-wp
+			text-align: center
+			margin-top: 8px
+			height: 38px
+	&__bg
+		position: fixed
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(#000,.48)
+		z-index: 998
+		display: none

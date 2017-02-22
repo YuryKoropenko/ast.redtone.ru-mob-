@@ -15,14 +15,14 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
 	<!-- End_Styles -->
 	<!-- Scripts -->
 	<script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
+	<script type="text/javascript" src="libs/jquery-ui/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<!-- End_Scripts -->
 </head>
@@ -36,17 +36,19 @@
 			</div>
 		</div>
 		<div class="header__center">
-			<script type="text/javascript">
-				$(document).ready(function() {
-					$('.p-slider').slick();
-				});
-			</script>
 			<ul class="p-slider">
 				<li class="p-slider__item">
-					<a href="tel:+74959958290" class="p-slider__link">Москва: +7 (495) 995-82-90</a>
-				</li>
-				<li class="p-slider__item">
-					<a href="tel:+74959958290" class="p-slider__link">Москва: +7 (495) 995-82-90</a>
+					<script>
+						$(document).ready(function() {
+							$('.p-slider__select').selectmenu();
+						});
+					</script>
+					<select name="" id="" class="p-slider__select">
+						<option value="">Москва</option>
+						<option value="">СПб</option>
+						<option value="">Сочи</option>
+					</select>
+					<a href="tel:+74959958290" class="p-slider__link">+7 (495) 995-82-90</a>
 				</li>
 			</ul>
 		</div>
@@ -81,11 +83,27 @@
 		</div>
 	</header>
 	<div class="page">
-		<div class="page__amenities">
-			<div class="amenities">
-				<b class="amenities__title">
-					Услуги
-				</b>
+		<div class="page__pagination">
+			<ul class="pagination">
+				<li class="pagination__item">
+					<a href="#" class="pagination__link">
+						главная
+					</a>
+				</li>
+				<li class="pagination__item pagination__item-active">
+					<a href="#" class="pagination__link">
+						услуги
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="page__services">
+			<div class="services">
+				<div class="services__title-wp">
+					<b class="a-company__title email-us__title">
+						услуги
+					</b>
+				</div>
 				<ul class="amenities__element">
 					<li class="amenities__item">
 						ИТ обеспечение
@@ -106,28 +124,23 @@
 						Аренда оборудование
 					</li>
 				</ul>
-			</div>
-		</div>
-		<div class="page__amenities page__f-projects">
-			<div class="amenities f-projects">
-				<b class="amenities__title f-projects__title">
-					Готовые проекты
-				</b>
-				<div class="f-projects__item">
-					<div class="f-projects__img-wp">
-						<img src="img/f-projects-img.jpg" alt="" class="f-projects__img">
-						<div class="f-projects__img-text">
-							<p>
-								Зал пленарного заседания ВЭФ-2015, Владивосток
-							</p>
-						</div>
-					</div>
-					<div class="f-projects__description">
+				<div class="services__element">
+					<b class="a-company__title email-us__title">
+						ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ МЕРОПРИЯТИЙ
+					</b>
+					<div class="a-company__description f-projects__description">
 						<p>
-							ЗАО «АСТ Телеком» предлагает своим клиентам полное техническое обеспечение мероприятий любого масштаба — от небольших пресс-конференций до международных съездов с участием видных иностранных делегаций.
+							Мы готовы предложить Вам самые современные решения  для Вашего события. Наш многолетний опыт позволяет проводить мероприятия любого уровня начиная от небольших выставочных стендов заканчивая полным техническим обслуживание крупных международных форумов.
 						</p>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="page__r-full">
+			<div class="r-full">
+				<a href="#" class="r-full__text">
+					Полная версия раздела
+				</a>
 			</div>
 		</div>
 	</div>

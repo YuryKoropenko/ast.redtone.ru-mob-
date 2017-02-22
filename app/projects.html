@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Заголовок</title>
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Styles -->
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+	<!-- End_Styles -->
+	<!-- Scripts -->
+	<script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="libs/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<!-- End_Scripts -->
+</head>
+<body>
+	<header class="header">
+		<div class="header__top">
+			<div class="logo">
+				<a href="/" class="logo__link">
+					<img src="img/logo.png" alt="" class="logo__img">
+				</a>
+			</div>
+		</div>
+		<div class="header__center">
+			<ul class="p-slider">
+				<li class="p-slider__item">
+					<script>
+						$(document).ready(function() {
+							$('.p-slider__select').selectmenu();
+						});
+					</script>
+					<select name="" id="" class="p-slider__select">
+						<option value="">Москва</option>
+						<option value="">СПб</option>
+						<option value="">Сочи</option>
+					</select>
+					<a href="tel:+74959958290" class="p-slider__link">+7 (495) 995-82-90</a>
+				</li>
+			</ul>
+		</div>
+		<div class="header__bottom">
+			<div class="t-menu">
+				<a href="#" class="t-menu__button">
+					<span class="t-menu__button-close"></span>
+				</a>
+				<ul class="t-menu__element">
+					<li class="t-menu__item">
+						<a href="#" class="t-menu__link">
+							услуги
+						</a>
+					</li>
+					<li class="t-menu__item">
+						<a href="#" class="t-menu__link">
+							проекты
+						</a>
+					</li>
+					<li class="t-menu__item">
+						<a href="#" class="t-menu__link">
+							о компании
+						</a>
+					</li>
+					<li class="t-menu__item">
+						<a href="#" class="t-menu__link">
+							написать нам
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="page">
+		<div class="page__pagination">
+			<ul class="pagination">
+				<li class="pagination__item">
+					<a href="#" class="pagination__link">
+						главная
+					</a>
+				</li>
+				<li class="pagination__item pagination__item-active">
+					<a href="#" class="pagination__link">
+						проекты
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="page__a-company">
+			<div class="projects a-company">
+				<b class="projects__title a-company__title email-us__title">
+					Проекты
+				</b>
+				<ul class="projects__element">
+					<li class="projects__item">
+						<div class="projects__img-wp">
+							<img src="img/project/1.jpg" alt="" class="projects__img">
+						</div>
+						<a href="#" class="projects__item-title">
+							МОЛОДЕЖНЫЙ ФОРУМ "ГЕРОИ НАШЕГО ВРЕМЕнИ"
+						</a>
+					</li>
+					<li class="projects__item">
+						<div class="projects__img-wp">
+							<img src="img/project/2.jpg" alt="" class="projects__img">
+						</div>
+						<a href="#" class="projects__item-title">
+							МЕЖДУНАРОДНЫЙ ФОРУМ "РОСТОВСКАЯ ОБЛАСТЬ – ТЕРРИТОРИЯ РОСТА"
+						</a>
+					</li>
+					<li class="projects__item">
+						<div class="projects__img-wp">
+							<img src="img/project/3.jpg" alt="" class="projects__img">
+						</div>
+						<a href="#" class="projects__item-title">
+							ВСЕРОССИЙСКИЙ ФОРУМ «ЖКХ – НОВОЕ КАЧЕСТВО»
+						</a>
+					</li>
+				</ul>
+				<ul class="projects__element projects__element-hidden">
+					<li class="projects__item">
+						<div class="projects__img-wp">
+							<img src="img/project/1.jpg" alt="" class="projects__img">
+						</div>
+						<a href="#" class="projects__item-title">
+							МОЛОДЕЖНЫЙ ФОРУМ "ГЕРОИ НАШЕГО ВРЕМЕнИ"
+						</a>
+					</li>
+					<li class="projects__item">
+						<div class="projects__img-wp">
+							<img src="img/project/2.jpg" alt="" class="projects__img">
+						</div>
+						<a href="#" class="projects__item-title">
+							МЕЖДУНАРОДНЫЙ ФОРУМ "РОСТОВСКАЯ ОБЛАСТЬ – ТЕРРИТОРИЯ РОСТА"
+						</a>
+					</li>
+					<li class="projects__item">
+						<div class="projects__img-wp">
+							<img src="img/project/3.jpg" alt="" class="projects__img">
+						</div>
+						<a href="#" class="projects__item-title">
+							ВСЕРОССИЙСКИЙ ФОРУМ «ЖКХ – НОВОЕ КАЧЕСТВО»
+						</a>
+					</li>
+				</ul>
+				<div class="projects__button-wp project__button-wp">
+					<a href="#" class="projects__button project__button">
+						показать ещё
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="page__r-full">
+			<div class="r-full">
+				<a href="#" class="r-full__text">
+					Полная версия раздела
+				</a>
+			</div>
+		</div>
+		<div class="f-popup__bg"></div>
+		<div class="page__f-popup">
+			<div class="f-popup">
+				<button class="f-popup__close"></button>
+				<div class="f-popup__description">
+					<p>
+						Подробнее о данном проекте вы можете прочитать на полной версии
+					</p>
+					<a href="#">
+						нашего сайта
+					</a>
+				</div>
+				<div class="f-popup__img-wp">
+					<img src="img/popup-logo.png" alt="" class="f-popup__img">
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="f-phone">
+				<span>
+					Телефон: (495) 995-82-90
+				</span>
+			</div>
+			<div class="f-addr">
+				<span>
+					Адрес: Москва, Можайское ш. 29/2 стр.1
+				</span>
+			</div>
+			<div class="f-email">
+				<span>
+					E-mail: <a href="info@ast-telecom.ru">info@ast-telecom.ru</a>
+				</span>
+			</div>
+			<div class="f-contact">
+				<a href="#">
+					Контакты
+				</a>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<ul class="social">
+				<li class="social__item">
+					<a href="#" class="social__link">
+						<span class="social-f"></span>
+					</a>
+				</li>
+				<li class="social__item">
+					<a href="#" class="social__link">
+						<span class="social-t"></span>
+					</a>
+				</li>
+				<li class="social__item">
+					<a href="#" class="social__link">
+						<span class="social-v"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<div class="f-version-wp">
+		<div class="f-version">
+			<a href="#" class="f-version__link">
+				Перейти на полную версию сайта
+			</a>
+		</div>
+	</div>
+</body>
+</html>
